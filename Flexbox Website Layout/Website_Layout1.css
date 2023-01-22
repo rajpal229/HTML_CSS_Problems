@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box; /* box-sizing property allows us to include the padding and border in an element's total width and height. */
+    font-style: italic;
+    font-weight: 900;
+    color: brown; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;  /*vh - viewpoint height, vw - viewpoint width*/
+    flex-direction: column;
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    /*flex-direction: column;--*/
+    flex: 1;
+  }
+  #main > article {
+    flex: 1;
+    order: 1;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw; /* Size of flex */
+  }
+  #main > nav {
+    background: #D7E8D2;
+    order: 2;
+  }
+  #main > aside {
+    background: blueviolet;
+    order: 3;
+  }
+  header, footer {
+    background: cyan;
+    text-align: center;
+    height: 20vh;
+  }
+  header, footer, article, nav, aside {
+    border: 1px solid red;
+    padding: 1em;
+  }
+.show:hover{
+    color: black;
+    text-decoration: underline;
+}
+  .hide{
+    display: none;
+  }
+ .show:hover + .hide {
+    display: block;
+    color: red;
+  }
